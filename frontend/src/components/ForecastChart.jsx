@@ -31,30 +31,30 @@ export default function ForecastChart({ timeline = [], metrics = {} }) {
     const item = payload[0]?.payload || {};
 
     return (
-      <div className="bg-slate-900/95 backdrop-blur-md text-white p-3 rounded-xl shadow-xl border border-slate-700 text-xs space-y-1.5 z-50">
-        <p className="font-semibold text-sky-400 border-b border-slate-700/80 pb-1">{label}</p>
+      <div className="bg-white/95 backdrop-blur-md text-slate-800 p-3.5 rounded-2xl shadow-xl border border-sky-200 text-xs space-y-1.5 z-50">
+        <p className="font-bold text-sky-700 border-b border-sky-100 pb-1">{label}</p>
         {item.is_forecast ? (
           <>
-            <p className="text-white flex justify-between gap-4">
+            <p className="text-slate-700 flex justify-between gap-4">
               <span>Prophet Forecast:</span>
-              <span className="font-bold text-sky-300">{item.forecast_score} / 100</span>
+              <span className="font-black text-sky-600">{item.forecast_score} / 100</span>
             </p>
-            <p className="text-slate-400 flex justify-between gap-4">
+            <p className="text-slate-500 flex justify-between gap-4">
               <span>80% Confidence Interval:</span>
-              <span>{item.forecast_lower} – {item.forecast_upper}</span>
+              <span className="font-medium text-slate-600">{item.forecast_lower} – {item.forecast_upper}</span>
             </p>
-            <p className="text-amber-300 flex justify-between gap-4">
+            <p className="text-amber-700 flex justify-between gap-4">
               <span>Risk Category:</span>
               <span className="font-bold">{item.risk_level}</span>
             </p>
           </>
         ) : (
           <>
-            <p className="text-white flex justify-between gap-4">
+            <p className="text-slate-700 flex justify-between gap-4">
               <span>Observed Stress:</span>
-              <span className="font-bold text-sky-300">{item.historical_score} / 100</span>
+              <span className="font-black text-sky-600">{item.historical_score} / 100</span>
             </p>
-            {item.temp && <p className="text-slate-400">Temp: {item.temp}°C | Rain: {item.precip}mm</p>}
+            {item.temp && <p className="text-slate-500">Temp: {item.temp}°C | Rain: {item.precip}mm</p>}
           </>
         )}
       </div>

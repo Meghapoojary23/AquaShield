@@ -33,8 +33,8 @@ export default function LoginPage({ onLoginSuccess }) {
     <div className="min-h-[calc(100vh-5rem)] flex items-center justify-center p-4 sm:p-6 lg:p-8">
       <div className="bg-white/95 backdrop-blur-md rounded-3xl border border-sky-100 shadow-xl overflow-hidden max-w-4xl w-full grid grid-cols-1 md:grid-cols-2">
         {/* Left Branding Area with 3D Logo */}
-        <div className="bg-gradient-to-br from-sky-600 via-sky-700 to-blue-900 p-8 text-white flex flex-col justify-between relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-80 h-80 bg-white/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none" />
+        <div className="bg-gradient-to-br from-sky-500 via-sky-600 to-blue-700 p-8 text-white flex flex-col justify-between relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-cyan-300/15 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none" />
 
           {/* Top Tag */}
           <div className="relative z-10 flex items-center justify-between">

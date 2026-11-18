@@ -14,10 +14,10 @@ export default function PlannerDashboard({ summary, currentRisk, forecast, onSel
   return (
     <div className="space-y-6">
       {/* 3D Hero Banner Section */}
-      <div className="bg-gradient-to-r from-sky-600 via-sky-700 to-blue-900 rounded-3xl p-6 sm:p-8 text-white shadow-xl shadow-sky-600/15 relative overflow-hidden">
+      <div className="bg-gradient-to-r from-sky-500 via-sky-600 to-blue-700 rounded-3xl p-6 sm:p-8 text-white shadow-xl shadow-sky-500/25 relative overflow-hidden">
         {/* Soft Radial Ambient Lights */}
-        <div className="absolute right-0 top-0 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" />
-        <div className="absolute left-1/3 bottom-0 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute right-0 top-0 w-96 h-96 bg-cyan-300/20 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" />
+        <div className="absolute left-1/3 bottom-0 w-80 h-80 bg-sky-400/20 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-6">
           {/* Hero Left Content */}

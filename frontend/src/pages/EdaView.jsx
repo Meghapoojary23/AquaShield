@@ -46,7 +46,7 @@ export default function EdaView() {
                 <XAxis dataKey="month" tick={{ fontSize: 10, fill: '#64748b' }} tickLine={false} />
                 <YAxis tick={{ fontSize: 10, fill: '#64748b' }} tickLine={false} />
                 <Tooltip
-                  contentStyle={{ backgroundColor: '#0f172a', borderRadius: '12px', color: '#fff', fontSize: '11px' }}
+                  contentStyle={{ backgroundColor: '#0284c7', borderRadius: '12px', border: '1px solid #38bdf8', color: '#fff', fontSize: '11px', boxShadow: '0 4px 12px rgba(2, 132, 199, 0.25)' }}
                 />
                 <Bar dataKey="avg_monthly_rain" fill="#0284c7" radius={[6, 6, 0, 0]} name="Rainfall (mm)" />
               </BarChart>
@@ -70,7 +70,7 @@ export default function EdaView() {
                 <XAxis dataKey="month" tick={{ fontSize: 10, fill: '#64748b' }} tickLine={false} />
                 <YAxis tick={{ fontSize: 10, fill: '#64748b' }} tickLine={false} />
                 <Tooltip
-                  contentStyle={{ backgroundColor: '#0f172a', borderRadius: '12px', color: '#fff', fontSize: '11px' }}
+                  contentStyle={{ backgroundColor: '#0284c7', borderRadius: '12px', border: '1px solid #38bdf8', color: '#fff', fontSize: '11px', boxShadow: '0 4px 12px rgba(2, 132, 199, 0.25)' }}
                 />
                 <Legend wrapperStyle={{ fontSize: '11px' }} />
                 <Line type="monotone" dataKey="avg_stress_score" stroke="#ef4444" strokeWidth={2.2} name="Water Stress Score" />
