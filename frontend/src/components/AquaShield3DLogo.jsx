@@ -1,20 +1,24 @@
-import React, { useRef, useMemo, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Float, ContactShadows } from '@react-three/drei';
+import { Float, ContactShadows, useTexture } from '@react-three/drei';
 import * as THREE from 'three';
 
-// --- 3D Squircle Tile with Volumetric Glossy Droplet (Matching Reference Image) ---
-function AquaShieldEmblemMesh({ isHovered, reducedMotion }) {
-  const groupRef = useRef();
-  const dropletRef = useRef();
-  const shieldDetailRef = useRef();
+// --- 3D Interactive Emblem Mesh Textured with User's Official Logo ---
+function Emblem3DMesh({ isHovered, reducedMotion }) {
+  const meshRef = useRef();
+  const texture = useTexture('/aquashield-logo.png');
 
-  // 1. Premium Rounded Squircle Tile Geometry (Matching reference icon tile)
-  const squircleGeometry = useMemo(() => {
+  // Configure texture quality
+  texture.colorSpace = THREE.SRGBColorSpace;
+  texture.generateMipmaps = true;
+  texture.minFilter = THREE.LinearMipmapLinearFilter;
+
+  // Geometry: Beveled rounded tile
+  const squircleGeom = React.useMemo(() => {
     const shape = new THREE.Shape();
-    const w = 1.65;
-    const h = 1.65;
-    const r = 0.42; // Smooth rounded corner radius
+    const w = 1.7;
+    const h = 1.7;
+    const r = 0.42;
     const hw = w / 2;
     const hh = h / 2;
 
@@ -29,184 +33,103 @@ function AquaShieldEmblemMesh({ isHovered, reducedMotion }) {
     shape.quadraticCurveTo(-hw, -hh, -hw + r, -hh);
 
     const geom = new THREE.ExtrudeGeometry(shape, {
-      depth: 0.16,
+      depth: 0.12,
       bevelEnabled: true,
       bevelSegments: 8,
       steps: 1,
-      bevelSize: 0.07,
-      bevelThickness: 0.07
-    });
-    geom.center();
-    return geom;
-  }, []);
-
-  // 2. Pure 3D Volumetric Water Droplet Geometry (Centered on the tile)
-  const dropletGeometry = useMemo(() => {
-    const shape = new THREE.Shape();
-    // Droplet profile matching reference image
-    shape.moveTo(0, 0.44);
-    shape.bezierCurveTo(0.12, 0.22, 0.38, -0.06, 0.38, -0.22);
-    shape.bezierCurveTo(0.38, -0.46, 0.22, -0.52, 0, -0.52);
-    shape.bezierCurveTo(-0.22, -0.52, -0.38, -0.46, -0.38, -0.22);
-    shape.bezierCurveTo(-0.38, -0.06, -0.12, 0.22, 0, 0.44);
-
-    const geom = new THREE.ExtrudeGeometry(shape, {
-      depth: 0.14,
-      bevelEnabled: true,
-      bevelSegments: 10,
-      steps: 1,
-      bevelSize: 0.08,
-      bevelThickness: 0.12
-    });
-    geom.center();
-    return geom;
-  }, []);
-
-  // 3. Subtle Inner Shield Highlight detail (Protection symbol)
-  const shieldGeometry = useMemo(() => {
-    const shape = new THREE.Shape();
-    shape.moveTo(0, 0.18);
-    shape.lineTo(0.14, 0.13);
-    shape.quadraticCurveTo(0.15, -0.04, 0.09, -0.14);
-    shape.lineTo(0, -0.24);
-    shape.lineTo(-0.09, -0.14);
-    shape.quadraticCurveTo(-0.15, -0.04, -0.14, 0.13);
-    shape.closePath();
-
-    const geom = new THREE.ExtrudeGeometry(shape, {
-      depth: 0.04,
-      bevelEnabled: true,
-      bevelSegments: 3,
-      steps: 1,
-      bevelSize: 0.02,
-      bevelThickness: 0.02
+      bevelSize: 0.06,
+      bevelThickness: 0.06
     });
     geom.center();
     return geom;
   }, []);
 
   useFrame((state, delta) => {
-    if (!groupRef.current) return;
+    if (!meshRef.current) return;
 
     if (!reducedMotion) {
-      // 3D Parallax Tilt towards cursor
+      // 3D Parallax Tilt towards cursor position
       const targetRotX = -state.pointer.y * 0.45;
       const targetRotY = state.pointer.x * 0.55;
-      const targetRotZ = (state.pointer.x * state.pointer.y) * 0.2;
+      const targetRotZ = (state.pointer.x * state.pointer.y) * 0.15;
 
-      // Idle smooth breathing rotation + pointer tracking
-      groupRef.current.rotation.x = THREE.MathUtils.lerp(
-        groupRef.current.rotation.x,
-        targetRotX + Math.sin(state.clock.elapsedTime * 1.5) * 0.04,
+      // Idle smooth floating rotation + cursor tracking
+      meshRef.current.rotation.x = THREE.MathUtils.lerp(
+        meshRef.current.rotation.x,
+        targetRotX + Math.sin(state.clock.elapsedTime * 1.5) * 0.035,
         0.08
       );
-      groupRef.current.rotation.y = THREE.MathUtils.lerp(
-        groupRef.current.rotation.y,
-        targetRotY + Math.cos(state.clock.elapsedTime * 1.2) * 0.05,
+      meshRef.current.rotation.y = THREE.MathUtils.lerp(
+        meshRef.current.rotation.y,
+        targetRotY + Math.cos(state.clock.elapsedTime * 1.2) * 0.04,
         0.08
       );
-      groupRef.current.rotation.z = THREE.MathUtils.lerp(
-        groupRef.current.rotation.z,
+      meshRef.current.rotation.z = THREE.MathUtils.lerp(
+        meshRef.current.rotation.z,
         targetRotZ,
         0.08
       );
-
-      // Droplet subtle independent floating parallax
-      if (dropletRef.current) {
-        dropletRef.current.position.z = 0.18 + Math.sin(state.clock.elapsedTime * 2.2) * 0.025;
-      }
     }
 
-    // Hover scale smoothly
-    const targetScale = isHovered ? 1.09 : 1.0;
-    groupRef.current.scale.lerp(
+    // Smooth hover scale
+    const targetScale = isHovered ? 1.08 : 1.0;
+    meshRef.current.scale.lerp(
       new THREE.Vector3(targetScale, targetScale, targetScale),
       0.1
     );
   });
 
   return (
-    <group ref={groupRef}>
-      {/* 1. Vibrant Ocean/Cyan Squircle Tile */}
-      <mesh geometry={squircleGeometry} position={[0, 0, 0]}>
+    <group ref={meshRef}>
+      {/* 3D Tile Base with Metallic Azure Edge */}
+      <mesh geometry={squircleGeom} position={[0, 0, 0]}>
         <meshPhysicalMaterial
           color="#0284C7"
-          emissive="#0369A1"
-          emissiveIntensity={0.25}
-          roughness={0.16}
-          metalness={0.12}
+          roughness={0.15}
+          metalness={0.25}
           clearcoat={1.0}
-          clearcoatRoughness={0.06}
+          clearcoatRoughness={0.05}
           reflectivity={0.9}
         />
       </mesh>
 
-      {/* 2. Top-face Sheen / Cyan Gradient Overlay */}
-      <mesh position={[0, 0, 0.14]}>
-        <planeGeometry args={[1.5, 1.5]} />
-        <meshStandardMaterial
-          color="#38BDF8"
-          emissive="#06B6D4"
-          emissiveIntensity={0.2}
+      {/* Front Face with User's Official Logo Texture */}
+      <mesh position={[0, 0, 0.125]}>
+        <planeGeometry args={[1.72, 1.72]} />
+        <meshBasicMaterial
+          map={texture}
+          transparent={true}
+          toneMapped={false}
+        />
+      </mesh>
+
+      {/* Crystal Glass Overcoat Layer (adds depth, specular highlights & optical sheen) */}
+      <mesh position={[0, 0, 0.13]}>
+        <planeGeometry args={[1.72, 1.72]} />
+        <meshPhysicalMaterial
           transparent={true}
           opacity={0.35}
-          roughness={0.2}
-        />
-      </mesh>
-
-      {/* 3. Luminous Glossy White 3D Water Droplet (Centerpiece) */}
-      <mesh
-        ref={dropletRef}
-        geometry={dropletGeometry}
-        position={[0, -0.02, 0.18]}
-      >
-        <meshPhysicalMaterial
-          color="#FFFFFF"
-          emissive="#E0F2FE"
-          emissiveIntensity={0.35}
-          roughness={0.04}
-          metalness={0.04}
+          roughness={0.05}
+          metalness={0.05}
           clearcoat={1.0}
           clearcoatRoughness={0.03}
-          reflectivity={1.0}
-          transmission={0.3} // Liquid crystal reflection
-          thickness={0.8}
-          ior={1.333}
-        />
-      </mesh>
-
-      {/* 4. Subtle Embossed Shield Detail (Protection Identity) */}
-      <mesh
-        ref={shieldDetailRef}
-        geometry={shieldGeometry}
-        position={[0, -0.05, 0.32]}
-        scale={[0.75, 0.75, 0.75]}
-      >
-        <meshStandardMaterial
-          color="#0284C7"
-          emissive="#38BDF8"
-          emissiveIntensity={0.4}
-          metalness={0.8}
-          roughness={0.2}
-          transparent={true}
-          opacity={0.85}
+          reflectivity={0.95}
         />
       </mesh>
     </group>
   );
 }
 
-// Crisp Vector SVG Fallback (Matching reference image)
-function StaticSvgFallback({ sizeClass }) {
+// Crisp Static Fallback using the Official Logo
+function StaticLogoFallback({ sizeClass }) {
   return (
     <div className={`flex items-center justify-center ${sizeClass}`}>
-      <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-3xl bg-gradient-to-tr from-sky-600 via-sky-500 to-cyan-400 p-6 flex items-center justify-center shadow-xl shadow-sky-500/30 border border-sky-300/40">
-        <svg viewBox="0 0 100 120" className="w-16 h-16 drop-shadow-lg text-white">
-          <path
-            d="M50 8 C50 8 18 56 18 80 A32 32 0 0 0 82 80 C82 56 50 8 50 8 Z"
-            fill="#FFFFFF"
-          />
-        </svg>
+      <div className="relative w-full h-full max-w-[280px] max-h-[280px] p-2 flex items-center justify-center">
+        <img
+          src="/aquashield-logo.png"
+          alt="AquaShield Logo"
+          className="w-full h-full object-contain rounded-3xl drop-shadow-2xl"
+        />
       </div>
     </div>
   );
@@ -241,7 +164,7 @@ export default function AquaShield3DLogo({
     sm: 'w-24 h-24',
     md: 'w-36 h-36 sm:w-44 sm:h-44',
     lg: 'w-52 h-52 sm:w-60 sm:h-60',
-    hero: 'w-64 h-64 sm:w-76 sm:h-76'
+    hero: 'w-64 h-64 sm:w-80 sm:h-80'
   };
 
   const containerSize = sizeDimensions[size] || sizeDimensions.md;
@@ -253,42 +176,42 @@ export default function AquaShield3DLogo({
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        {/* Soft Ambient Cyan Glow matching reference image */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-sky-500/25 via-cyan-400/20 to-blue-600/20 rounded-3xl blur-2xl pointer-events-none transform scale-95" />
+        {/* Soft Ambient Cyan Glow matching the official logo */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-sky-500/30 via-cyan-400/25 to-blue-600/25 rounded-3xl blur-2xl pointer-events-none transform scale-95" />
 
         {hasWebGL ? (
-          <Canvas
-            camera={{ position: [0, 0, 3.4], fov: 42 }}
-            dpr={[1, 2]}
-            gl={{ alpha: true, antialias: true, powerPreference: 'high-performance' }}
-            style={{ width: '100%', height: '100%' }}
-          >
-            {/* Cinematic Lighting Setup for glossy liquid highlights */}
-            <ambientLight intensity={0.9} />
-            <directionalLight position={[4, 6, 5]} intensity={1.8} color="#FFFFFF" />
-            <directionalLight position={[-4, -3, 3]} intensity={1.0} color="#38BDF8" />
-            <pointLight position={[0, 0, 2.5]} intensity={1.2} color="#E0F2FE" />
-
-            <Float
-              speed={reducedMotion ? 0 : 2.2}
-              rotationIntensity={reducedMotion ? 0 : 0.25}
-              floatIntensity={reducedMotion ? 0 : 0.4}
+          <Suspense fallback={<StaticLogoFallback sizeClass={containerSize} />}>
+            <Canvas
+              camera={{ position: [0, 0, 3.4], fov: 42 }}
+              dpr={[1, 2]}
+              gl={{ alpha: true, antialias: true, powerPreference: 'high-performance' }}
+              style={{ width: '100%', height: '100%' }}
             >
-              <AquaShieldEmblemMesh isHovered={isHovered} reducedMotion={reducedMotion} />
-            </Float>
+              <ambientLight intensity={1.0} />
+              <directionalLight position={[4, 6, 5]} intensity={1.8} color="#FFFFFF" />
+              <directionalLight position={[-4, -3, 3]} intensity={1.0} color="#38BDF8" />
+              <pointLight position={[0, 0, 2.5]} intensity={1.2} color="#E0F2FE" />
 
-            {/* Soft Ambient Contact Shadow beneath the tile */}
-            <ContactShadows
-              position={[0, -1.25, 0]}
-              opacity={0.45}
-              scale={2.6}
-              blur={2.2}
-              far={2.8}
-              color="#0284C7"
-            />
-          </Canvas>
+              <Float
+                speed={reducedMotion ? 0 : 2.2}
+                rotationIntensity={reducedMotion ? 0 : 0.25}
+                floatIntensity={reducedMotion ? 0 : 0.35}
+              >
+                <Emblem3DMesh isHovered={isHovered} reducedMotion={reducedMotion} />
+              </Float>
+
+              <ContactShadows
+                position={[0, -1.25, 0]}
+                opacity={0.45}
+                scale={2.6}
+                blur={2.2}
+                far={2.8}
+                color="#0284C7"
+              />
+            </Canvas>
+          </Suspense>
         ) : (
-          <StaticSvgFallback sizeClass={containerSize} />
+          <StaticLogoFallback sizeClass={containerSize} />
         )}
       </div>
 

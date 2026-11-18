@@ -22,9 +22,11 @@ export default function Navbar({ onToggleSidebar, activeTab }) {
             </button>
 
             <div className="flex items-center gap-2.5">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 via-sky-500 to-cyan-400 flex items-center justify-center text-white shadow-md shadow-sky-500/20">
-                <Droplet className="w-5 h-5 fill-current" />
-              </div>
+              <img
+                src="/aquashield-logo.png"
+                alt="AquaShield Logo"
+                className="w-10 h-10 rounded-xl object-contain drop-shadow-md hover:scale-105 transition-transform"
+              />
               <div>
                 <span className="text-lg font-black text-slate-900 tracking-tight flex items-center gap-1">
                   Aqua<span className="text-sky-600">Shield</span>

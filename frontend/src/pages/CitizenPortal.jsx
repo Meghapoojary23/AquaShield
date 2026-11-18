@@ -32,8 +32,12 @@ export default function CitizenPortal({ summary, alerts }) {
     <div className="max-w-4xl mx-auto space-y-6">
       {/* Big Friendly Hero Card */}
       <div className="bg-gradient-to-br from-sky-500 via-sky-600 to-blue-700 rounded-3xl p-6 sm:p-8 text-white shadow-xl shadow-sky-600/20 text-center space-y-4">
-        <div className="inline-flex p-3 rounded-2xl bg-white/20 backdrop-blur-md">
-          <Droplet className="w-8 h-8 fill-current text-sky-100" />
+        <div className="inline-flex p-1.5 rounded-3xl bg-white/20 backdrop-blur-md shadow-lg">
+          <img
+            src="/aquashield-logo.png"
+            alt="AquaShield Logo"
+            className="w-16 h-16 sm:w-20 sm:h-20 object-contain rounded-2xl drop-shadow-md"
+          />
         </div>
         <div className="space-y-1">
           <h1 className="text-2xl sm:text-3xl font-black">Mangaluru Public Water Portal</h1>

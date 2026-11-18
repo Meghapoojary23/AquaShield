@@ -56,14 +56,16 @@ export default function Sidebar({ isOpen, onClose, activeTab, onSelectTab }) {
           </button>
         </div>
 
-        {/* Lightweight Static Logo in Sidebar as required */}
-        <div className="flex items-center gap-2.5 px-2 py-1 bg-slate-50/80 rounded-xl border border-slate-100">
-          <div className="w-7 h-7 rounded-lg bg-gradient-to-tr from-sky-600 to-cyan-400 flex items-center justify-center text-white shadow-xs shrink-0">
-            <Droplet className="w-3.5 h-3.5 fill-current" />
-          </div>
+        {/* Official Static Logo in Sidebar */}
+        <div className="flex items-center gap-2.5 px-2 py-1.5 bg-slate-50/80 rounded-xl border border-slate-100">
+          <img
+            src="/aquashield-logo.png"
+            alt="AquaShield Logo"
+            className="w-7 h-7 rounded-lg object-contain drop-shadow-xs shrink-0"
+          />
           <div className="truncate">
             <span className="text-xs font-black text-slate-900 tracking-tight">Aqua<span className="text-sky-600">Shield</span></span>
-            <p className="text-[9px] text-slate-400 uppercase tracking-wider font-semibold">Static Sidebar Icon</p>
+            <p className="text-[9px] text-slate-400 uppercase tracking-wider font-semibold">Official Platform Logo</p>
           </div>
         </div>
 
