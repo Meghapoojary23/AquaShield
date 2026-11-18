@@ -1,9 +1,10 @@
 import React from 'react';
-import { Droplets, Thermometer, ArrowDownRight, Compass, ShieldAlert, Sparkles, ChevronRight, Activity } from 'lucide-react';
+import { Droplets, Thermometer, ArrowDownRight, Compass, ShieldAlert, Sparkles, ChevronRight, Activity, TrendingUp, Sliders } from 'lucide-react';
 import StatCard from '../components/StatCard';
 import RiskBadge from '../components/RiskBadge';
 import ForecastChart from '../components/ForecastChart';
 import ShapWaterfall from '../components/ShapWaterfall';
+import AquaShield3DLogo from '../components/AquaShield3DLogo';
 
 export default function PlannerDashboard({ summary, currentRisk, forecast, onSelectTab }) {
   const latest = summary?.latest_observation || {};
@@ -12,31 +13,63 @@ export default function PlannerDashboard({ summary, currentRisk, forecast, onSel
 
   return (
     <div className="space-y-6">
-      {/* Top Banner with Risk State */}
-      <div className="bg-gradient-to-r from-sky-600 via-sky-700 to-blue-800 rounded-3xl p-6 sm:p-8 text-white shadow-lg shadow-sky-600/15 relative overflow-hidden">
-        <div className="absolute right-0 top-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" />
-        <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
-          <div className="space-y-2 max-w-xl">
-            <div className="flex items-center gap-2">
-              <span className="px-3 py-1 rounded-full bg-white/20 text-white text-xs font-semibold backdrop-blur-sm">
+      {/* 3D Hero Banner Section */}
+      <div className="bg-gradient-to-r from-sky-600 via-sky-700 to-blue-900 rounded-3xl p-6 sm:p-8 text-white shadow-xl shadow-sky-600/15 relative overflow-hidden">
+        {/* Soft Radial Ambient Lights */}
+        <div className="absolute right-0 top-0 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" />
+        <div className="absolute left-1/3 bottom-0 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-6">
+          {/* Hero Left Content */}
+          <div className="space-y-3 max-w-xl text-center lg:text-left">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2">
+              <span className="px-3 py-1 rounded-full bg-white/15 text-white text-xs font-semibold backdrop-blur-sm border border-white/10">
                 Region: Dakshina Kannada / Mangaluru
               </span>
-              <span className="text-xs text-sky-200">Observed: {latest.date || 'Latest'}</span>
+              <span className="text-xs text-sky-200">14-Year Telemetry Active</span>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-black tracking-tight">
-              AI Water Crisis Early Warning Engine
-            </h1>
-            <p className="text-sm text-sky-100/90 leading-relaxed">
-              Evaluating multi-source hydrological indicators across 14 years of telemetry. Advance warning indicates elevated seasonal stress.
+
+            <div>
+              <h1 className="text-3xl sm:text-4xl font-black tracking-tight flex items-center justify-center lg:justify-start gap-2">
+                Aqua<span className="text-cyan-300">Shield</span>
+              </h1>
+              <p className="text-xs sm:text-sm font-bold text-sky-200 uppercase tracking-wider mt-0.5">
+                AI-Powered Water Crisis Intelligence
+              </p>
+            </div>
+
+            <p className="text-xs sm:text-sm text-sky-100/90 leading-relaxed">
+              Synthesizing multi-source hydrological indicators to forecast droughts, classify risk severity, explain causality via SHAP, and track conservation recovery.
             </p>
+
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 pt-2">
+              <button
+                onClick={() => onSelectTab('forecast')}
+                className="px-4 py-2 rounded-xl bg-white text-sky-800 hover:bg-sky-50 text-xs font-bold shadow-md shadow-black/10 flex items-center gap-1.5 transition-all"
+              >
+                <TrendingUp className="w-3.5 h-3.5 text-sky-600" />
+                <span>90-Day Forecast</span>
+              </button>
+              <button
+                onClick={() => onSelectTab('simulator')}
+                className="px-4 py-2 rounded-xl bg-white/15 hover:bg-white/25 text-white text-xs font-bold border border-white/20 backdrop-blur-sm flex items-center gap-1.5 transition-all"
+              >
+                <Sliders className="w-3.5 h-3.5 text-cyan-300" />
+                <span>What-If Simulator</span>
+              </button>
+            </div>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5 shrink-0 flex flex-col items-center md:items-end justify-center space-y-2">
-            <p className="text-xs uppercase tracking-wider text-sky-200 font-semibold">Active Early Warning Level</p>
-            <RiskBadge level={latest.risk_level || currentRisk?.predicted_risk || 'High'} size="lg" />
-            <p className="text-xs text-sky-200/90">
-              Stress Score: <strong className="text-white text-sm font-mono">{latest.water_stress_score || 72.6}</strong> / 100
-            </p>
+          {/* Hero Right: Interactive 3D Water Droplet Logo */}
+          <div className="flex flex-col items-center justify-center shrink-0">
+            <AquaShield3DLogo size="md" />
+            <div className="bg-white/15 backdrop-blur-md border border-white/20 rounded-2xl px-4 py-2 mt-1 flex items-center gap-3">
+              <RiskBadge level={latest.risk_level || currentRisk?.predicted_risk || 'High'} size="sm" />
+              <div className="text-left border-l border-white/20 pl-3">
+                <p className="text-[10px] text-sky-200 leading-tight">Stress Score</p>
+                <p className="text-xs font-black text-white font-mono">{latest.water_stress_score || 72.6} / 100</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

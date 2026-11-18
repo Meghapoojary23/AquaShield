@@ -7,6 +7,7 @@ import CitizenPortal from './pages/CitizenPortal';
 import AdminPanel from './pages/AdminPanel';
 import RecoveryTrackerView from './pages/RecoveryTrackerView';
 import EdaView from './pages/EdaView';
+import LoginPage from './pages/LoginPage';
 import ForecastChart from './components/ForecastChart';
 import ShapWaterfall from './components/ShapWaterfall';
 import SimulatorCard from './components/SimulatorCard';
@@ -324,6 +325,10 @@ function MainApp() {
           )}
 
           {activeTab === 'admin_panel' && <AdminPanel />}
+
+          {activeTab === 'login' && (
+            <LoginPage onLoginSuccess={() => setActiveTab('dashboard')} />
+          )}
         </main>
       </div>
     </div>

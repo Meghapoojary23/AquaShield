@@ -11,7 +11,9 @@ import {
   Users,
   Eye,
   X,
-  MapPin
+  MapPin,
+  LogIn,
+  Droplet
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
@@ -40,15 +42,29 @@ export default function Sidebar({ isOpen, onClose, activeTab, onSelectTab }) {
     }
   }
 
+  // Common Auth / 3D Login Page entry
+  navItems.push({ id: 'login', label: '3D Login & Auth Portal', icon: LogIn });
+
   const sidebarContent = (
     <div className="flex flex-col h-full justify-between p-4 bg-white/95 border-r border-sky-100">
-      <div className="space-y-6">
+      <div className="space-y-5">
         {/* Mobile close button */}
         <div className="flex items-center justify-between lg:hidden pb-2 border-b border-slate-100">
           <span className="text-xs font-bold text-slate-800 uppercase tracking-wider">Navigation Menu</span>
           <button onClick={onClose} className="p-1 rounded-lg text-slate-400 hover:text-slate-600">
             <X className="w-5 h-5" />
           </button>
+        </div>
+
+        {/* Lightweight Static Logo in Sidebar as required */}
+        <div className="flex items-center gap-2.5 px-2 py-1 bg-slate-50/80 rounded-xl border border-slate-100">
+          <div className="w-7 h-7 rounded-lg bg-gradient-to-tr from-sky-600 to-cyan-400 flex items-center justify-center text-white shadow-xs shrink-0">
+            <Droplet className="w-3.5 h-3.5 fill-current" />
+          </div>
+          <div className="truncate">
+            <span className="text-xs font-black text-slate-900 tracking-tight">Aqua<span className="text-sky-600">Shield</span></span>
+            <p className="text-[9px] text-slate-400 uppercase tracking-wider font-semibold">Static Sidebar Icon</p>
+          </div>
         </div>
 
         {/* Location & Station Status Pill */}
