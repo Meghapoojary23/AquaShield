@@ -1,0 +1,1692 @@
+{
+  "metrics": {
+    "mae": 3.41,
+    "rmse": 3.88,
+    "mape": 5.52,
+    "horizon_days": 90,
+    "evaluation_period_days": 90,
+    "model_type": "Additive Time-Series with Seasonal Decomposition (Prophet)"
+  },
+  "timeline": [
+    {
+      "date": "2023-09-03",
+      "historical_score": 55.1,
+      "temp": 27.5,
+      "precip": 5.0,
+      "gw_level": 6.9,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-09-04",
+      "historical_score": 54.6,
+      "temp": 26.4,
+      "precip": 0.6,
+      "gw_level": 6.9,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-09-05",
+      "historical_score": 53.0,
+      "temp": 25.0,
+      "precip": 25.0,
+      "gw_level": 7.4,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-09-06",
+      "historical_score": 55.6,
+      "temp": 26.3,
+      "precip": 3.0,
+      "gw_level": 7.8,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-09-07",
+      "historical_score": 56.1,
+      "temp": 26.4,
+      "precip": 31.0,
+      "gw_level": 8.2,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-09-08",
+      "historical_score": 56.8,
+      "temp": 26.3,
+      "precip": 24.0,
+      "gw_level": 8.5,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-09-09",
+      "historical_score": 55.0,
+      "temp": 25.1,
+      "precip": 26.0,
+      "gw_level": 8.7,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-09-10",
+      "historical_score": 55.2,
+      "temp": 25.7,
+      "precip": 3.0,
+      "gw_level": 8.7,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-09-11",
+      "historical_score": 55.7,
+      "temp": 25.6,
+      "precip": 19.0,
+      "gw_level": 8.7,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-09-12",
+      "historical_score": 55.5,
+      "temp": 25.9,
+      "precip": 6.0,
+      "gw_level": 8.7,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-09-13",
+      "historical_score": 55.2,
+      "temp": 26.0,
+      "precip": 4.0,
+      "gw_level": 8.8,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-09-14",
+      "historical_score": 52.9,
+      "temp": 25.1,
+      "precip": 33.0,
+      "gw_level": 8.6,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-09-15",
+      "historical_score": 52.1,
+      "temp": 25.8,
+      "precip": 30.0,
+      "gw_level": 8.5,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-09-16",
+      "historical_score": 51.0,
+      "temp": 25.8,
+      "precip": 25.0,
+      "gw_level": 8.4,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-09-17",
+      "historical_score": 51.9,
+      "temp": 26.1,
+      "precip": 2.0,
+      "gw_level": 8.4,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-09-18",
+      "historical_score": 54.7,
+      "temp": 26.3,
+      "precip": 13.0,
+      "gw_level": 8.4,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-09-19",
+      "historical_score": 56.1,
+      "temp": 26.5,
+      "precip": 0.2,
+      "gw_level": 8.5,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-09-20",
+      "historical_score": 56.0,
+      "temp": 26.4,
+      "precip": 0.1,
+      "gw_level": 8.5,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-09-21",
+      "historical_score": 56.0,
+      "temp": 26.3,
+      "precip": 3.3,
+      "gw_level": 8.5,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-09-22",
+      "historical_score": 55.6,
+      "temp": 26.6,
+      "precip": 5.0,
+      "gw_level": 8.5,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-09-23",
+      "historical_score": 55.1,
+      "temp": 26.7,
+      "precip": 17.0,
+      "gw_level": 8.4,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-09-24",
+      "historical_score": 52.6,
+      "temp": 25.6,
+      "precip": 46.1,
+      "gw_level": 8.2,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-09-25",
+      "historical_score": 52.6,
+      "temp": 26.3,
+      "precip": 18.9,
+      "gw_level": 8.1,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-09-26",
+      "historical_score": 51.6,
+      "temp": 26.6,
+      "precip": 8.1,
+      "gw_level": 8.1,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-09-27",
+      "historical_score": 51.2,
+      "temp": 26.0,
+      "precip": 25.0,
+      "gw_level": 8.0,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-09-28",
+      "historical_score": 48.8,
+      "temp": 25.3,
+      "precip": 21.0,
+      "gw_level": 7.9,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-09-29",
+      "historical_score": 46.3,
+      "temp": 25.0,
+      "precip": 40.0,
+      "gw_level": 7.7,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-09-30",
+      "historical_score": 45.5,
+      "temp": 25.3,
+      "precip": 32.0,
+      "gw_level": 7.5,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-01",
+      "historical_score": 45.9,
+      "temp": 26.5,
+      "precip": 10.0,
+      "gw_level": 7.4,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-02",
+      "historical_score": 47.2,
+      "temp": 27.1,
+      "precip": 0.0,
+      "gw_level": 7.6,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-03",
+      "historical_score": 49.5,
+      "temp": 27.0,
+      "precip": 0.0,
+      "gw_level": 8.1,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-04",
+      "historical_score": 49.9,
+      "temp": 27.0,
+      "precip": 0.0,
+      "gw_level": 8.2,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-05",
+      "historical_score": 51.5,
+      "temp": 26.7,
+      "precip": 0.0,
+      "gw_level": 8.2,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-06",
+      "historical_score": 50.5,
+      "temp": 27.0,
+      "precip": 0.0,
+      "gw_level": 8.2,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-07",
+      "historical_score": 51.7,
+      "temp": 27.9,
+      "precip": 0.0,
+      "gw_level": 8.2,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-08",
+      "historical_score": 51.6,
+      "temp": 27.9,
+      "precip": 0.2,
+      "gw_level": 8.2,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-09",
+      "historical_score": 52.5,
+      "temp": 27.4,
+      "precip": 0.0,
+      "gw_level": 8.2,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-10",
+      "historical_score": 53.2,
+      "temp": 27.5,
+      "precip": 0.0,
+      "gw_level": 8.2,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-11",
+      "historical_score": 53.8,
+      "temp": 27.5,
+      "precip": 0.2,
+      "gw_level": 8.2,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-12",
+      "historical_score": 52.6,
+      "temp": 26.8,
+      "precip": 5.0,
+      "gw_level": 8.2,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-13",
+      "historical_score": 53.7,
+      "temp": 27.6,
+      "precip": 0.0,
+      "gw_level": 8.2,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-14",
+      "historical_score": 54.6,
+      "temp": 28.1,
+      "precip": 0.0,
+      "gw_level": 8.2,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-15",
+      "historical_score": 55.6,
+      "temp": 27.7,
+      "precip": 0.0,
+      "gw_level": 8.2,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-16",
+      "historical_score": 52.6,
+      "temp": 26.5,
+      "precip": 52.1,
+      "gw_level": 7.9,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-17",
+      "historical_score": 53.6,
+      "temp": 26.6,
+      "precip": 1.4,
+      "gw_level": 7.9,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-18",
+      "historical_score": 54.2,
+      "temp": 27.9,
+      "precip": 0.1,
+      "gw_level": 7.9,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-19",
+      "historical_score": 54.6,
+      "temp": 27.7,
+      "precip": 0.0,
+      "gw_level": 7.9,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-20",
+      "historical_score": 55.6,
+      "temp": 27.9,
+      "precip": 0.1,
+      "gw_level": 8.1,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-21",
+      "historical_score": 56.1,
+      "temp": 27.6,
+      "precip": 0.4,
+      "gw_level": 8.1,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-22",
+      "historical_score": 56.3,
+      "temp": 27.6,
+      "precip": 0.0,
+      "gw_level": 8.2,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-23",
+      "historical_score": 57.6,
+      "temp": 28.0,
+      "precip": 0.0,
+      "gw_level": 8.4,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-24",
+      "historical_score": 59.5,
+      "temp": 28.2,
+      "precip": 0.0,
+      "gw_level": 8.5,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-25",
+      "historical_score": 61.2,
+      "temp": 28.7,
+      "precip": 0.0,
+      "gw_level": 8.5,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-26",
+      "historical_score": 62.7,
+      "temp": 28.6,
+      "precip": 0.0,
+      "gw_level": 8.6,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-27",
+      "historical_score": 63.9,
+      "temp": 28.3,
+      "precip": 0.0,
+      "gw_level": 8.7,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-28",
+      "historical_score": 63.9,
+      "temp": 28.9,
+      "precip": 0.0,
+      "gw_level": 8.7,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-29",
+      "historical_score": 62.6,
+      "temp": 28.0,
+      "precip": 34.0,
+      "gw_level": 8.7,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-30",
+      "historical_score": 62.6,
+      "temp": 26.5,
+      "precip": 8.0,
+      "gw_level": 8.8,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-10-31",
+      "historical_score": 63.1,
+      "temp": 27.0,
+      "precip": 5.0,
+      "gw_level": 8.9,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-01",
+      "historical_score": 62.9,
+      "temp": 27.6,
+      "precip": 1.0,
+      "gw_level": 8.9,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-02",
+      "historical_score": 63.9,
+      "temp": 28.8,
+      "precip": 0.0,
+      "gw_level": 9.0,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-03",
+      "historical_score": 63.5,
+      "temp": 27.4,
+      "precip": 19.0,
+      "gw_level": 8.9,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-04",
+      "historical_score": 62.1,
+      "temp": 26.6,
+      "precip": 0.0,
+      "gw_level": 8.9,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-05",
+      "historical_score": 60.6,
+      "temp": 26.4,
+      "precip": 30.0,
+      "gw_level": 8.7,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-06",
+      "historical_score": 59.7,
+      "temp": 26.7,
+      "precip": 40.1,
+      "gw_level": 8.6,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-07",
+      "historical_score": 61.6,
+      "temp": 27.9,
+      "precip": 1.1,
+      "gw_level": 8.6,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-08",
+      "historical_score": 60.4,
+      "temp": 27.1,
+      "precip": 18.0,
+      "gw_level": 8.8,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-09",
+      "historical_score": 59.7,
+      "temp": 26.2,
+      "precip": 5.0,
+      "gw_level": 8.8,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-10",
+      "historical_score": 61.5,
+      "temp": 27.7,
+      "precip": 0.1,
+      "gw_level": 8.9,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-11",
+      "historical_score": 63.6,
+      "temp": 28.7,
+      "precip": 0.0,
+      "gw_level": 9.0,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-12",
+      "historical_score": 65.4,
+      "temp": 28.3,
+      "precip": 0.0,
+      "gw_level": 9.2,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-13",
+      "historical_score": 64.5,
+      "temp": 27.1,
+      "precip": 0.0,
+      "gw_level": 9.4,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-14",
+      "historical_score": 66.9,
+      "temp": 27.8,
+      "precip": 0.0,
+      "gw_level": 9.5,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-15",
+      "historical_score": 68.3,
+      "temp": 27.6,
+      "precip": 0.0,
+      "gw_level": 9.6,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-16",
+      "historical_score": 67.2,
+      "temp": 28.6,
+      "precip": 0.0,
+      "gw_level": 9.6,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-17",
+      "historical_score": 65.5,
+      "temp": 28.6,
+      "precip": 1.0,
+      "gw_level": 9.6,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-18",
+      "historical_score": 64.7,
+      "temp": 28.5,
+      "precip": 0.0,
+      "gw_level": 9.6,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-19",
+      "historical_score": 66.4,
+      "temp": 29.1,
+      "precip": 0.0,
+      "gw_level": 9.6,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-20",
+      "historical_score": 67.4,
+      "temp": 28.9,
+      "precip": 0.0,
+      "gw_level": 9.6,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-21",
+      "historical_score": 68.5,
+      "temp": 28.5,
+      "precip": 0.0,
+      "gw_level": 9.6,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-22",
+      "historical_score": 66.0,
+      "temp": 28.4,
+      "precip": 0.0,
+      "gw_level": 9.6,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-23",
+      "historical_score": 65.5,
+      "temp": 28.4,
+      "precip": 0.0,
+      "gw_level": 9.6,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-24",
+      "historical_score": 63.5,
+      "temp": 27.3,
+      "precip": 1.0,
+      "gw_level": 9.6,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-25",
+      "historical_score": 66.2,
+      "temp": 28.4,
+      "precip": 0.0,
+      "gw_level": 9.6,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-26",
+      "historical_score": 68.4,
+      "temp": 28.4,
+      "precip": 0.0,
+      "gw_level": 9.6,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-27",
+      "historical_score": 68.9,
+      "temp": 29.2,
+      "precip": 0.0,
+      "gw_level": 9.6,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-28",
+      "historical_score": 68.5,
+      "temp": 28.8,
+      "precip": 0.0,
+      "gw_level": 9.6,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-29",
+      "historical_score": 67.8,
+      "temp": 28.6,
+      "precip": 0.0,
+      "gw_level": 9.6,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-11-30",
+      "historical_score": 70.3,
+      "temp": 29.2,
+      "precip": 0.0,
+      "gw_level": 9.9,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-01",
+      "historical_score": 69.5,
+      "temp": 27.9,
+      "precip": 0.5,
+      "gw_level": 9.9,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-02",
+      "historical_score": 70.4,
+      "temp": 28.3,
+      "precip": 0.0,
+      "gw_level": 9.9,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-03",
+      "historical_score": 71.4,
+      "temp": 28.6,
+      "precip": 0.0,
+      "gw_level": 9.9,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-04",
+      "historical_score": 70.6,
+      "temp": 27.4,
+      "precip": 0.0,
+      "gw_level": 9.9,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-05",
+      "historical_score": 70.7,
+      "temp": 27.2,
+      "precip": 0.0,
+      "gw_level": 9.9,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-06",
+      "historical_score": 72.1,
+      "temp": 27.6,
+      "precip": 0.0,
+      "gw_level": 9.9,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-07",
+      "historical_score": 72.4,
+      "temp": 27.1,
+      "precip": 0.0,
+      "gw_level": 9.9,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-08",
+      "historical_score": 73.0,
+      "temp": 27.7,
+      "precip": 0.0,
+      "gw_level": 9.9,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-09",
+      "historical_score": 70.1,
+      "temp": 28.0,
+      "precip": 9.0,
+      "gw_level": 9.9,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-10",
+      "historical_score": 66.8,
+      "temp": 26.8,
+      "precip": 64.0,
+      "gw_level": 9.5,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-11",
+      "historical_score": 66.9,
+      "temp": 26.9,
+      "precip": 0.0,
+      "gw_level": 9.5,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-12",
+      "historical_score": 67.6,
+      "temp": 28.0,
+      "precip": 0.0,
+      "gw_level": 9.5,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-13",
+      "historical_score": 69.1,
+      "temp": 27.7,
+      "precip": 0.0,
+      "gw_level": 9.7,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-14",
+      "historical_score": 71.6,
+      "temp": 27.1,
+      "precip": 0.0,
+      "gw_level": 9.8,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-15",
+      "historical_score": 71.2,
+      "temp": 26.9,
+      "precip": 0.0,
+      "gw_level": 9.8,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-16",
+      "historical_score": 70.1,
+      "temp": 27.5,
+      "precip": 0.0,
+      "gw_level": 9.8,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-17",
+      "historical_score": 69.9,
+      "temp": 27.8,
+      "precip": 0.0,
+      "gw_level": 9.8,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-18",
+      "historical_score": 71.3,
+      "temp": 27.7,
+      "precip": 0.0,
+      "gw_level": 9.9,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-19",
+      "historical_score": 72.0,
+      "temp": 28.0,
+      "precip": 0.0,
+      "gw_level": 9.9,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-20",
+      "historical_score": 72.7,
+      "temp": 27.6,
+      "precip": 0.0,
+      "gw_level": 10.1,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-21",
+      "historical_score": 72.2,
+      "temp": 27.5,
+      "precip": 0.0,
+      "gw_level": 10.3,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-22",
+      "historical_score": 71.2,
+      "temp": 28.2,
+      "precip": 0.0,
+      "gw_level": 10.3,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-23",
+      "historical_score": 72.4,
+      "temp": 27.7,
+      "precip": 0.0,
+      "gw_level": 10.4,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-24",
+      "historical_score": 72.6,
+      "temp": 26.3,
+      "precip": 0.0,
+      "gw_level": 10.4,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-25",
+      "historical_score": 72.8,
+      "temp": 27.3,
+      "precip": 0.0,
+      "gw_level": 10.4,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-26",
+      "historical_score": 73.7,
+      "temp": 27.4,
+      "precip": 0.0,
+      "gw_level": 10.4,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-27",
+      "historical_score": 75.7,
+      "temp": 26.6,
+      "precip": 0.0,
+      "gw_level": 10.4,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-28",
+      "historical_score": 75.6,
+      "temp": 27.4,
+      "precip": 0.0,
+      "gw_level": 10.4,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-29",
+      "historical_score": 74.1,
+      "temp": 27.8,
+      "precip": 0.0,
+      "gw_level": 10.4,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-30",
+      "historical_score": 73.5,
+      "temp": 27.1,
+      "precip": 0.0,
+      "gw_level": 10.4,
+      "is_forecast": false
+    },
+    {
+      "date": "2023-12-31",
+      "historical_score": 72.6,
+      "temp": 27.1,
+      "precip": 0.0,
+      "gw_level": 10.4,
+      "is_forecast": false
+    },
+    {
+      "date": "2024-01-01",
+      "forecast_score": 76.5,
+      "forecast_lower": 69.0,
+      "forecast_upper": 84.7,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-02",
+      "forecast_score": 76.5,
+      "forecast_lower": 68.8,
+      "forecast_upper": 84.5,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-03",
+      "forecast_score": 76.6,
+      "forecast_lower": 68.8,
+      "forecast_upper": 84.4,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-04",
+      "forecast_score": 76.7,
+      "forecast_lower": 69.1,
+      "forecast_upper": 85.3,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-05",
+      "forecast_score": 76.8,
+      "forecast_lower": 69.2,
+      "forecast_upper": 85.0,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-06",
+      "forecast_score": 76.9,
+      "forecast_lower": 69.4,
+      "forecast_upper": 85.2,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-07",
+      "forecast_score": 76.9,
+      "forecast_lower": 69.2,
+      "forecast_upper": 84.7,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-08",
+      "forecast_score": 77.0,
+      "forecast_lower": 69.0,
+      "forecast_upper": 84.9,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-09",
+      "forecast_score": 77.0,
+      "forecast_lower": 69.5,
+      "forecast_upper": 84.6,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-10",
+      "forecast_score": 77.1,
+      "forecast_lower": 69.2,
+      "forecast_upper": 85.2,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-11",
+      "forecast_score": 77.2,
+      "forecast_lower": 69.4,
+      "forecast_upper": 84.9,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-12",
+      "forecast_score": 77.3,
+      "forecast_lower": 69.8,
+      "forecast_upper": 85.0,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-13",
+      "forecast_score": 77.4,
+      "forecast_lower": 69.6,
+      "forecast_upper": 85.3,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-14",
+      "forecast_score": 77.5,
+      "forecast_lower": 70.1,
+      "forecast_upper": 85.3,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-15",
+      "forecast_score": 77.6,
+      "forecast_lower": 70.4,
+      "forecast_upper": 84.9,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-16",
+      "forecast_score": 77.6,
+      "forecast_lower": 69.8,
+      "forecast_upper": 85.5,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-17",
+      "forecast_score": 77.8,
+      "forecast_lower": 69.6,
+      "forecast_upper": 85.9,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-18",
+      "forecast_score": 77.8,
+      "forecast_lower": 70.4,
+      "forecast_upper": 86.4,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-19",
+      "forecast_score": 78.0,
+      "forecast_lower": 69.8,
+      "forecast_upper": 85.8,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-20",
+      "forecast_score": 78.1,
+      "forecast_lower": 70.0,
+      "forecast_upper": 85.7,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-21",
+      "forecast_score": 78.3,
+      "forecast_lower": 70.7,
+      "forecast_upper": 86.3,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-22",
+      "forecast_score": 78.4,
+      "forecast_lower": 70.5,
+      "forecast_upper": 86.3,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-23",
+      "forecast_score": 78.5,
+      "forecast_lower": 70.3,
+      "forecast_upper": 86.1,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-24",
+      "forecast_score": 78.7,
+      "forecast_lower": 71.2,
+      "forecast_upper": 87.1,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-25",
+      "forecast_score": 78.8,
+      "forecast_lower": 70.8,
+      "forecast_upper": 86.5,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-26",
+      "forecast_score": 79.0,
+      "forecast_lower": 72.0,
+      "forecast_upper": 86.8,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-27",
+      "forecast_score": 79.2,
+      "forecast_lower": 70.9,
+      "forecast_upper": 86.7,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-28",
+      "forecast_score": 79.3,
+      "forecast_lower": 70.6,
+      "forecast_upper": 87.3,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-29",
+      "forecast_score": 79.5,
+      "forecast_lower": 71.5,
+      "forecast_upper": 87.1,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-30",
+      "forecast_score": 79.6,
+      "forecast_lower": 72.2,
+      "forecast_upper": 87.2,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-01-31",
+      "forecast_score": 79.8,
+      "forecast_lower": 72.4,
+      "forecast_upper": 87.2,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-01",
+      "forecast_score": 79.9,
+      "forecast_lower": 71.8,
+      "forecast_upper": 88.4,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-02",
+      "forecast_score": 80.1,
+      "forecast_lower": 72.4,
+      "forecast_upper": 88.1,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-03",
+      "forecast_score": 80.3,
+      "forecast_lower": 73.0,
+      "forecast_upper": 87.6,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-04",
+      "forecast_score": 80.4,
+      "forecast_lower": 72.0,
+      "forecast_upper": 88.1,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-05",
+      "forecast_score": 80.6,
+      "forecast_lower": 73.0,
+      "forecast_upper": 88.6,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-06",
+      "forecast_score": 80.7,
+      "forecast_lower": 73.3,
+      "forecast_upper": 88.4,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-07",
+      "forecast_score": 80.9,
+      "forecast_lower": 73.3,
+      "forecast_upper": 88.4,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-08",
+      "forecast_score": 81.0,
+      "forecast_lower": 73.4,
+      "forecast_upper": 89.2,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-09",
+      "forecast_score": 81.1,
+      "forecast_lower": 73.0,
+      "forecast_upper": 88.5,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-10",
+      "forecast_score": 81.3,
+      "forecast_lower": 73.5,
+      "forecast_upper": 88.8,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-11",
+      "forecast_score": 81.4,
+      "forecast_lower": 73.7,
+      "forecast_upper": 89.5,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-12",
+      "forecast_score": 81.6,
+      "forecast_lower": 73.6,
+      "forecast_upper": 89.3,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-13",
+      "forecast_score": 81.7,
+      "forecast_lower": 74.0,
+      "forecast_upper": 89.7,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-14",
+      "forecast_score": 81.8,
+      "forecast_lower": 74.3,
+      "forecast_upper": 89.6,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-15",
+      "forecast_score": 81.9,
+      "forecast_lower": 74.0,
+      "forecast_upper": 89.5,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-16",
+      "forecast_score": 82.1,
+      "forecast_lower": 74.3,
+      "forecast_upper": 89.8,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-17",
+      "forecast_score": 82.2,
+      "forecast_lower": 74.0,
+      "forecast_upper": 90.2,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-18",
+      "forecast_score": 82.4,
+      "forecast_lower": 74.2,
+      "forecast_upper": 90.7,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-19",
+      "forecast_score": 82.5,
+      "forecast_lower": 74.8,
+      "forecast_upper": 90.0,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-20",
+      "forecast_score": 82.6,
+      "forecast_lower": 74.6,
+      "forecast_upper": 91.0,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-21",
+      "forecast_score": 82.8,
+      "forecast_lower": 74.6,
+      "forecast_upper": 90.0,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-22",
+      "forecast_score": 82.9,
+      "forecast_lower": 74.6,
+      "forecast_upper": 91.3,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-23",
+      "forecast_score": 83.1,
+      "forecast_lower": 75.6,
+      "forecast_upper": 91.0,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-24",
+      "forecast_score": 83.2,
+      "forecast_lower": 75.2,
+      "forecast_upper": 90.8,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-25",
+      "forecast_score": 83.4,
+      "forecast_lower": 76.0,
+      "forecast_upper": 90.9,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-26",
+      "forecast_score": 83.5,
+      "forecast_lower": 75.7,
+      "forecast_upper": 90.6,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-27",
+      "forecast_score": 83.6,
+      "forecast_lower": 75.8,
+      "forecast_upper": 91.5,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-28",
+      "forecast_score": 83.8,
+      "forecast_lower": 76.1,
+      "forecast_upper": 91.3,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-02-29",
+      "forecast_score": 83.9,
+      "forecast_lower": 76.7,
+      "forecast_upper": 91.6,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-01",
+      "forecast_score": 84.1,
+      "forecast_lower": 77.0,
+      "forecast_upper": 91.9,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-02",
+      "forecast_score": 84.2,
+      "forecast_lower": 76.5,
+      "forecast_upper": 91.9,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-03",
+      "forecast_score": 84.4,
+      "forecast_lower": 76.7,
+      "forecast_upper": 91.7,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-04",
+      "forecast_score": 84.5,
+      "forecast_lower": 77.1,
+      "forecast_upper": 92.4,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-05",
+      "forecast_score": 84.6,
+      "forecast_lower": 77.4,
+      "forecast_upper": 92.3,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-06",
+      "forecast_score": 84.7,
+      "forecast_lower": 77.1,
+      "forecast_upper": 92.4,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-07",
+      "forecast_score": 84.8,
+      "forecast_lower": 76.4,
+      "forecast_upper": 92.5,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-08",
+      "forecast_score": 84.9,
+      "forecast_lower": 76.6,
+      "forecast_upper": 92.5,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-09",
+      "forecast_score": 85.0,
+      "forecast_lower": 76.4,
+      "forecast_upper": 92.4,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-10",
+      "forecast_score": 85.1,
+      "forecast_lower": 76.7,
+      "forecast_upper": 92.4,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-11",
+      "forecast_score": 85.1,
+      "forecast_lower": 77.4,
+      "forecast_upper": 92.6,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-12",
+      "forecast_score": 85.2,
+      "forecast_lower": 77.4,
+      "forecast_upper": 93.1,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-13",
+      "forecast_score": 85.2,
+      "forecast_lower": 77.4,
+      "forecast_upper": 92.7,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-14",
+      "forecast_score": 85.2,
+      "forecast_lower": 77.2,
+      "forecast_upper": 92.4,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-15",
+      "forecast_score": 85.3,
+      "forecast_lower": 77.2,
+      "forecast_upper": 92.6,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-16",
+      "forecast_score": 85.3,
+      "forecast_lower": 77.7,
+      "forecast_upper": 92.9,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-17",
+      "forecast_score": 85.3,
+      "forecast_lower": 77.6,
+      "forecast_upper": 92.8,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-18",
+      "forecast_score": 85.3,
+      "forecast_lower": 77.6,
+      "forecast_upper": 93.3,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-19",
+      "forecast_score": 85.2,
+      "forecast_lower": 77.0,
+      "forecast_upper": 93.0,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-20",
+      "forecast_score": 85.2,
+      "forecast_lower": 77.6,
+      "forecast_upper": 93.1,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-21",
+      "forecast_score": 85.2,
+      "forecast_lower": 76.9,
+      "forecast_upper": 93.2,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-22",
+      "forecast_score": 85.2,
+      "forecast_lower": 77.2,
+      "forecast_upper": 92.8,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-23",
+      "forecast_score": 85.1,
+      "forecast_lower": 77.2,
+      "forecast_upper": 92.8,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-24",
+      "forecast_score": 85.1,
+      "forecast_lower": 77.1,
+      "forecast_upper": 93.2,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-25",
+      "forecast_score": 85.0,
+      "forecast_lower": 77.6,
+      "forecast_upper": 92.7,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-26",
+      "forecast_score": 84.9,
+      "forecast_lower": 77.1,
+      "forecast_upper": 92.6,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-27",
+      "forecast_score": 84.9,
+      "forecast_lower": 76.9,
+      "forecast_upper": 92.8,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-28",
+      "forecast_score": 84.8,
+      "forecast_lower": 77.0,
+      "forecast_upper": 93.2,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-29",
+      "forecast_score": 84.8,
+      "forecast_lower": 76.7,
+      "forecast_upper": 92.4,
+      "risk_level": "Critical",
+      "is_forecast": true
+    },
+    {
+      "date": "2024-03-30",
+      "forecast_score": 84.7,
+      "forecast_lower": 77.1,
+      "forecast_upper": 92.7,
+      "risk_level": "Critical",
+      "is_forecast": true
+    }
+  ]
+}

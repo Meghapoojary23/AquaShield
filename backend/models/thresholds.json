@@ -1,0 +1,15 @@
+{
+  "p25": 44.52,
+  "p50": 64.51,
+  "p75": 74.19,
+  "min_score": 6.7,
+  "max_score": 89.08,
+  "mean_score": 58.14,
+  "kmeans_agreement_pct": 72.15,
+  "distribution": {
+    "Low": 1278,
+    "Medium": 1278,
+    "High": 1278,
+    "Critical": 1279
+  }
+}
